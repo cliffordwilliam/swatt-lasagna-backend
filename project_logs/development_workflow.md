@@ -25,6 +25,18 @@ Enter PostgreSQL prompt first
 psql
 ```
 
+List all db
+
+```bash
+\l
+```
+
+Connect to the db you want
+
+```bash
+\c swatt_lasagna_app
+```
+
 GET all tables
 
 ```bash
