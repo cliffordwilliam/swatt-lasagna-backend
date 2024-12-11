@@ -42,3 +42,13 @@ Clear the prompt
 ```bash
 \! clear
 ```
+
+Run server on my local machine port 3000
+
+```bash
+node app.js
+```
+
+```bash
+npx nodemon app.js
+```

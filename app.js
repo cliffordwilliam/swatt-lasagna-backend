@@ -1,16 +1,12 @@
-import { express } from "express";
+import express from 'express';
+import personRoutes from './src/routes/personRoutes.js';
+
 const app = express();
 
-// Middleware to parse JSON
-app.use(express.json());
+app.use(express.json()); // Middleware for parsing JSON
+app.use('/api', personRoutes); // Use the person routes under /api path
 
-// Example route
-app.get('/', (req, res) => {
-  res.send('Swatt Lasagna Backend is running!');
-});
-
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });
